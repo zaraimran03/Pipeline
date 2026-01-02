@@ -10,14 +10,14 @@ pipeline {
     environment { 
         REPO_URL      = 'https://github.com/zaraimran03/Pipeline' 
         SONARQUBE_ENV = 'SonarQube-Server' 
-        DOCKER_SERVER = 'ubuntu@ip-172-31-20-138' 
+        DOCKER_SERVER = 'ubuntu@ip-172-31-44-104' 
         SONAR_SCANNER_OPTS = "-Xmx512m" 
     } 
 
     stages { 
         stage('Checkout Code') { 
             steps { 
-                git branch: 'master', 
+                git branch: 'main', 
                     url: "${REPO_URL}", 
                     credentialsId: 'github-credentials' 
             } 
